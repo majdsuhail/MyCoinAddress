@@ -51,20 +51,20 @@ def user(routing):
     user = eval(str(mycursor.fetchall()))
     if len(user)==0:
         mydb.close()
-        return render_template('404.html')
+        return render_template('/html/404.html')
 
     mydb.close()
     user=user[0]
     data=[user[1],user[2],user[3],user[4],user[5],user[6]]
 
-    return render_template('index3.html',data=data+[imgcon(data[1]),imgcon(data[4])])
+    return render_template('/html/index3.html',data=data+[imgcon(data[1]),imgcon(data[4])])
 
 
 @app.route('/delete', methods=['GET','POST'])
 def delete():
     if request.method == 'GET':
         data={}
-        return render_template('index2.html',data=data)
+        return render_template('/html/index2.html',data=data)
 
     mydb = mysql.connector.connect(
         host="MAEGOX.mysql.pythonanywhere-services.com",
@@ -83,7 +83,7 @@ def delete():
     if len(all)==0:
         mydb.close()
         data={'aError':'This address is not associated with a page'}
-        return render_template('index2.html',data=data)
+        return render_template('/html/index2.html',data=data)
 
     if data[1] == all[0][8]:
         sql="DELETE FROM addresses WHERE address=%s AND password=%s;"
@@ -91,12 +91,12 @@ def delete():
         mydb.commit()
         mydb.close()
         data={'success':'your page was deleted successfully'}
-        return render_template('index2.html',data=data)
+        return render_template('/html/index2.html',data=data)
 
     else:
         mydb.close()
         data={'pError':'password is wrong'}
-        return render_template('index2.html',data=data)
+        return render_template('/html/index2.html',data=data)
 
 
 
@@ -105,7 +105,7 @@ def welcome():
 
     if request.method == 'GET':
         data={}
-        return render_template('index.html',data=data)
+        return render_template('/html/index.html',data=data)
 
     mydb = mysql.connector.connect(
         host="MAEGOX.mysql.pythonanywhere-services.com",
@@ -123,12 +123,12 @@ def welcome():
     if len(all) != 0 :
         mydb.close()
         data={'error':'This address is already associated with an existing page','link':'mycoinaddress.com/'+all[0][0]}
-        return render_template('index.html',data=data)
+        return render_template('/html/index.html',data=data)
 
     if len(data[0])>50 or len(data[1])>60 or len(data[2])>50 or len(data[3])>20 or len(data[4])>25 or len(data[5])>280 or len(data[6])>32 or len(data[6])<6 or data[0].isspace() or data[1].isspace() or data[6].isspace() or data[0]=='' or data[1]=='' or data[6] == '':
         mydb.close()
 
-        return render_template('RR.html')
+        return render_template('/html/RR.html')
 
     bool=True
     while bool:
@@ -149,12 +149,12 @@ def welcome():
     mydb.close()
 
     data={'success':'Your page is ready!','link':'mycoinaddress.com/'+routing}
-    return render_template('index.html',data=data)
+    return render_template('/html/index.html',data=data)
 
 
 @app.errorhandler(404)
 def not_found(e):
 
-  return render_template("404.html")
+  return render_template("/html/404.html")
 
 

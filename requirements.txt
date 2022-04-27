@@ -1,0 +1,6 @@
+Flask
+Flask-Cors
+regex
+datetime
+gunicorn
+streamlit

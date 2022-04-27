@@ -1,6 +1,8 @@
-Flask
-Flask-Cors
-regex
+flask
+requests
+mysql.connector
+random
+string
 datetime
 gunicorn
 streamlit

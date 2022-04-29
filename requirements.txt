@@ -1,8 +1,6 @@
 flask
 requests
 mysql.connector
-random
-string
 datetime
 gunicorn
 streamlit

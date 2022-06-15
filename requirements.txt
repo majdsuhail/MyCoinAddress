@@ -5,5 +5,4 @@ datetime
 gunicorn
 streamlit
 qrcode
-base64
 io

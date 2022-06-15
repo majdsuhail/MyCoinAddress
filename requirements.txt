@@ -5,6 +5,5 @@ datetime
 gunicorn
 streamlit
 qrcode
-PIL
 base64
 io

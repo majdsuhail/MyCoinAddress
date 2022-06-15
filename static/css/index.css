@@ -1,0 +1,87 @@
+.right2{
+  padding:5%;
+}
+
+.right, .right2{
+  min-width: 320px;
+}
+
+.botButton{
+  margin-top: 20px;
+  width: 100%;
+  text-align: center;
+}
+.formContainer{
+  background-color: rgba(1,1,1,0.5);
+  border-radius: 5%;
+  padding:10px;
+}
+
+#button-addon, #button-addon2{
+  background-color:rgba(0, 132, 255, 1);
+  color: whitesmoke;
+}
+.left{
+ padding:10%;
+ text-align: center;
+
+}
+
+body{
+
+  background-image: url('/static/bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+label{
+  margin-top: 20px;
+}
+
+.readyLabel, .deletedLabel{
+  color: rgb(0, 255, 64);
+  font-weight: 500;
+}
+
+#readyDiv{
+  margin-top: 20px;
+  border-top: whitesmoke;
+  border-style: groove;
+  border-width: 2px 0px 0px 0px;
+}
+
+
+
+.check{
+  margin-top: 20px;
+}
+
+.optionalDiv{
+
+  border: solid;
+  border-width: 0px;
+  border-top-width: 1px;
+
+}
+
+#checkboxlabel{
+  margin-top: 0%;
+}
+
+#textinput, #descriptionHelp, #passwordLabel, #passwordHelp{
+  width: 100%;
+}
+
+.main-block{
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: whitesmoke;
+}
+
+#cryptoCoffee, #coffee{
+  margin-top: 5px;
+}

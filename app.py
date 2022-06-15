@@ -39,7 +39,7 @@ def randomRouting():
 @app.route('/<routing>')
 def user(routing):
     mydb = mysql.connector.connect(
-        host="mycoinaddress.herokuapp.com",
+        host="us-cdbr-east-05.cleardb.net",
         user="bee7b60e1a133a",
         password="932aaf6f",
         database="heroku_bbe2f6caae2f015")
@@ -67,7 +67,7 @@ def delete():
         return render_template('/html/index2.html',data=data)
 
     mydb = mysql.connector.connect(
-       host="mycoinaddress.herokuapp.com",
+       host="us-cdbr-east-05.cleardb.net",
         user="bee7b60e1a133a",
         password="932aaf6f",
         database="heroku_bbe2f6caae2f015")
@@ -108,7 +108,7 @@ def welcome():
         return render_template('/html/index.html',data=data)
 
     mydb = mysql.connector.connect(
-        host="mycoinaddress.herokuapp.com",
+        host="us-cdbr-east-05.cleardb.net",
         user="bee7b60e1a133a",
         password="932aaf6f",
         database="heroku_bbe2f6caae2f015")

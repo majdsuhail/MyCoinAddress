@@ -39,10 +39,10 @@ def randomRouting():
 @app.route('/<routing>')
 def user(routing):
     mydb = mysql.connector.connect(
-        host="MAEGOX.mysql.pythonanywhere-services.com",
-        user="MAEGOX",
-        password="who hacked me s7",
-        database="MAEGOX$mycoinaddress")
+        host="https://www.cleardb.com/service/1.0/api",
+        user="bee7b60e1a133a",
+        password="932aaf6f",
+        database="heroku_bbe2f6caae2f015")
 
     mycursor = mydb.cursor()
 
@@ -67,10 +67,10 @@ def delete():
         return render_template('/html/index2.html',data=data)
 
     mydb = mysql.connector.connect(
-        host="MAEGOX.mysql.pythonanywhere-services.com",
-        user="MAEGOX",
-        password="who hacked me s7",
-        database="MAEGOX$mycoinaddress")
+       host="https://www.cleardb.com/service/1.0/api",
+        user="bee7b60e1a133a",
+        password="932aaf6f",
+        database="heroku_bbe2f6caae2f015")
 
     mycursor = mydb.cursor()
 
@@ -108,10 +108,10 @@ def welcome():
         return render_template('/html/index.html',data=data)
 
     mydb = mysql.connector.connect(
-        host="MAEGOX.mysql.pythonanywhere-services.com",
-        user="MAEGOX",
-        password="who hacked me s7",
-        database="MAEGOX$mycoinaddress")
+        host="https://www.cleardb.com/service/1.0/api",
+        user="bee7b60e1a133a",
+        password="932aaf6f",
+        database="heroku_bbe2f6caae2f015")
 
     mycursor = mydb.cursor()
 

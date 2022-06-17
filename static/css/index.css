@@ -5,6 +5,7 @@
 
 .right, .right2{
   min-width: 320px;
+  font-family: "Anek Malayalam";
 
 }
 
@@ -28,6 +29,7 @@
 .left{
  padding:10%;
  text-align: center;
+ font-family: "Anek Malayalam";
 
 }
 
@@ -97,6 +99,10 @@ label{
 #submit{
   width: 200px;
   margin-top: 25px;
+}
+
+footer{
+  font-family: "Anek Malayalam";
 }
 
 

@@ -20,9 +20,10 @@
   padding:20px;
 }
 
-#button-addon, #button-addon2{
+#copyBtn{
   background-color:rgba(0, 132, 255, 1);
   color: whitesmoke;
+  width:200px;
   
 }
 .left{

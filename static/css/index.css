@@ -9,10 +9,6 @@
 
 }
 
-#button-addon2{ 
-  width:200px;
-}
-
 .botButton{
   margin-top: 20px;
   width: 100%;
@@ -27,6 +23,7 @@
 #button-addon, #button-addon2{
   background-color:rgba(0, 132, 255, 1);
   color: whitesmoke;
+  width: 200px;
 }
 .left{
  padding:10%;

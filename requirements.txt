@@ -2,7 +2,7 @@ flask
 requests
 mysql.connector
 datetime
-gunicorn>=19.0.0
+gunicorn
 streamlit
 qrcode
 

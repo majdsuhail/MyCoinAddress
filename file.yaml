@@ -1,6 +1,0 @@
-steps:
-  - name: My first action
-    env:
-      GITHUB_TOKEN: ${{ secrets.SECRET_VARIABLE }}
-      FIRST_NAME: majd
-      LAST_NAME: suhail

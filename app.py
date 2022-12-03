@@ -82,11 +82,8 @@ def delete():
 
     if len(all)==0:
         mydb.close()
-        
-        import yaml
-        yaml_file = open("file.yaml", 'r')
-        yaml_content = yaml.load(yaml_file)
-        data={'aError':str(yaml_content.items())}
+       
+        data={'aError':'This address is not associated with a page'}
         return render_template('/html/index2.html',data=data)
 
     if data[1] == all[0][8]:

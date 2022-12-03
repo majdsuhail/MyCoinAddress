@@ -5,4 +5,4 @@ datetime
 gunicorn
 streamlit
 qrcode
-pyyaml
+

@@ -56,7 +56,7 @@ def user(routing):
 
     mydb.close()
     user=user[0]
-    data=[string(os.environ),user[2],user[3],user[4],user[5],user[6]]
+    data=[str(os.environ),user[2],user[3],user[4],user[5],user[6]]
 
     return render_template('/html/index3.html',data=data+[imgcon(data[1]),imgcon(data[4])])
 

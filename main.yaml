@@ -1,0 +1,5 @@
+- name: execute py script # email-from-python.py
+        env: 
+          SECRET_KEY: ${{ secrets.SECRET_KEY }}
+          
+        run: python app.py

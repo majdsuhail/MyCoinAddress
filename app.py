@@ -38,8 +38,9 @@ def randomRouting():
 
 @app.route('/<routing>')
 def user(routing):
+    import os
     mydb = mysql.connector.connect(
-        host="us-cdbr-east-05.cleardb.net",
+        host=os.environ['SECRET_KEY'],
         user="bee7b60e1a133a",
         password="932aaf6f",
         database="heroku_bbe2f6caae2f015")

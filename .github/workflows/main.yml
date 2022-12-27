@@ -15,4 +15,4 @@ jobs:
         env:
           MY_SECRET: ${{ secrets.SECRET_KEY }}
         run: |
-          python app.py
+          python app.py 

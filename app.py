@@ -38,7 +38,6 @@ def randomRouting():
 
 @app.route('/<routing>')
 def user(routing):
-    import os
     mydb = mysql.connector.connect(
         host="us-cdbr-east-05.cleardb.net",
         user="bee7b60e1a133a",
@@ -56,7 +55,7 @@ def user(routing):
 
     mydb.close()
     user=user[0]
-    data=[str(os.environ),user[2],user[3],user[4],user[5],user[6]]
+    data=[user[1],user[2],user[3],user[4],user[5],user[6]]
 
     return render_template('/html/index3.html',data=data+[imgcon(data[1]),imgcon(data[4])])
 

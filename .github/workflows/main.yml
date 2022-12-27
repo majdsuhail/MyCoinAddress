@@ -1,6 +1,13 @@
-- name: Run tests
-  env: 
-       SECRET_KEY: ${{ secrets.SECRET_KEY }}
-       
-run: |
-   nbdev_test_nbs 
+name: Run test
+on: [push]
+
+jobs:
+  debug:
+    name: Debug
+    runs-on: ubuntu-latest
+    steps:
+     - name: Run tests
+       env: 
+         SECRET_KEY: ${{ secrets.SECRET_KEY }}       
+       run: |
+         echo: $SECRET_KEY 

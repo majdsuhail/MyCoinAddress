@@ -1,7 +1,0 @@
-
-- name: execute py script # email-from-python.py
-  env: 
-          EMAIL_SENDER: ${{ secrets.EMAIL_SENDER }}
-          EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
-          EMAIL_RECIPIENT: ${{ secrets.EMAIL_RECIPIENT }}
-  run: python app.py

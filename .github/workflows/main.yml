@@ -2,8 +2,8 @@ name: Run test
 on: [push]
 
 jobs:
-  debug:
-    name: Debug
+  my-job:
+    name: My Job
     runs-on: ubuntu-latest
     steps:
      - name: Run tests

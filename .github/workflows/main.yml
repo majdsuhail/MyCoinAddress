@@ -1,13 +1,7 @@
-name: Run test
-on: push
 
-jobs:
-  my-job:
-    name: My Job
-    runs-on: ubuntu-latest
-    steps:
-     - name: Run tests
-       env: 
-         SECRET_KEY: ${{ secrets.SECRET_KEY }}       
-       run: 
-          python app.py
+- name: execute py script # email-from-python.py
+  env: 
+          EMAIL_SENDER: ${{ secrets.EMAIL_SENDER }}
+          EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+          EMAIL_RECIPIENT: ${{ secrets.EMAIL_RECIPIENT }}
+  run: python app.py

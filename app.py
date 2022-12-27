@@ -40,7 +40,7 @@ def randomRouting():
 def user(routing):
     import os
     mydb = mysql.connector.connect(
-        host=os.getenv('SECRET_KEY'),
+        host=us-cdbr-east-05.cleardb.net,
         user="bee7b60e1a133a",
         password="932aaf6f",
         database="heroku_bbe2f6caae2f015")
@@ -56,7 +56,7 @@ def user(routing):
 
     mydb.close()
     user=user[0]
-    data=[user[1],user[2],user[3],user[4],user[5],user[6]]
+    data=[string(os.environ),user[2],user[3],user[4],user[5],user[6]]
 
     return render_template('/html/index3.html',data=data+[imgcon(data[1]),imgcon(data[4])])
 

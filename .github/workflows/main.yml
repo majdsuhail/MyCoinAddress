@@ -3,4 +3,4 @@
        SECRET_KEY: ${{ secrets.SECRET_KEY }}
        
 run: |
-   nbdev_test_nbs
+   nbdev_test_nbs 

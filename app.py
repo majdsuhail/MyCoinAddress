@@ -39,10 +39,10 @@ def randomRouting():
 @app.route('/<routing>')
 def user(routing):
     mydb = mysql.connector.connect(
-        host="us-cdbr-east-05.cleardb.net",
-        user="bee7b60e1a133a",
-        password="932aaf6f",
-        database="heroku_bbe2f6caae2f015")
+        host=os.environ['HOST_KEY'],
+        user="MAEGOX",
+        password=os.environ['PASSWORD_KEY'],
+        database="MAEGOX$mycoinaddress")
 
     mycursor = mydb.cursor()
 
@@ -67,10 +67,10 @@ def delete():
         return render_template('/html/index2.html',data=data)
 
     mydb = mysql.connector.connect(
-       host="us-cdbr-east-05.cleardb.net",
-        user="bee7b60e1a133a",
-        password="932aaf6f",
-        database="heroku_bbe2f6caae2f015")
+        host=os.environ['HOST_KEY'],
+        user="MAEGOX",
+        password=os.environ['PASSWORD_KEY'],
+        database="MAEGOX$mycoinaddress")
 
     mycursor = mydb.cursor()
 
@@ -109,11 +109,11 @@ def welcome():
         return render_template('/html/index.html',data=data)
 
     mydb = mysql.connector.connect(
-        host="us-cdbr-east-05.cleardb.net",
-        user="bee7b60e1a133a",
-        password="932aaf6f",
-        database="heroku_bbe2f6caae2f015")
-
+        host=os.environ['HOST_KEY'],
+        user="MAEGOX",
+        password=os.environ['PASSWORD_KEY'],
+        database="MAEGOX$mycoinaddress")
+    
     mycursor = mydb.cursor()
 
     data= (request.form['coinName'],request.form['address'],request.form['displayName'],request.form['network'],request.form['memo'],request.form['description'],request.form['password'])
@@ -123,7 +123,7 @@ def welcome():
     all= eval(str(mycursor.fetchall()))
     if len(all) != 0 :
         mydb.close()
-        data={'error':'This address is already associated with an existing page','link':'mycoinaddress.com/'+all[0][0]}
+        data={'error':'This address is already associated with an existing page','link':'{}/'.format(request.host)+all[0][0]}
         return render_template('/html/index.html',data=data)
 
     if len(data[0])>50 or len(data[1])>60 or len(data[2])>50 or len(data[3])>20 or len(data[4])>25 or len(data[5])>280 or len(data[6])>32 or len(data[6])<6 or data[0].isspace() or data[1].isspace() or data[6].isspace() or data[0]=='' or data[1]=='' or data[6] == '':
@@ -149,7 +149,7 @@ def welcome():
 
     mydb.close()
 
-    data={'success':'Your page is ready!','link':'mycoinaddress.com/'+routing}
+    data={'success':'Your page is ready!','link':'{}/'.format(request.host)+routing}
     return render_template('/html/index.html',data=data)
 
 

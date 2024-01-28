@@ -36,9 +36,5 @@ To run the app locally, make sure you have the required dependencies installed. 
 pip install -r requirements.txt
 ```
 
-## Contribution
-
-Feel free to contribute to the project by submitting issues or pull requests. Refer to CONTRIBUTING.md for more details.
-
 ## License
 This project is licensed under the MIT License.

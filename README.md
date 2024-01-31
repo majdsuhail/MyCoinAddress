@@ -1,6 +1,6 @@
 # MyCoinAddress
 
-MyCoinAddress is a user-friendly web app designed to simplify the sharing of crypto coin addresses. Users can input essential information such as the coin's name, coin's address (required fields), and additional details like Display name, Network, Memo, and Description (optional fields). After filling in the necessary information, users are provided with a unique link that directs them to a page displaying all the provided details, along with a QR code for the coin's address.
+MyCoinAddress is a user-friendly web app designed to simplify the sharing of crypto coin addresses. Users can input essential information such as the coin's name, coin's address (required fields), and additional details like Display name, Network, Memo, and Description (optional fields). After filling in the necessary information, users are provided with a unique link that directs them to a page displaying all the provided details, along with a QR code for the coin's address. This project utilizes a MySQL database and incorporates Bootstrap for an interactive and visually appealing user interface.
 
 ## Usage
 

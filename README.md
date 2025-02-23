@@ -14,27 +14,6 @@ MyCoinAddress is a user-friendly web app designed to simplify the sharing of cry
 
 To delete your link and associated information, visit the [Delete Page](https://maegox.pythonanywhere.com/delete). Enter the coin's address and the password you provided during link creation. Your link will be deleted.
 
-## Requirements
-
-- Flask
-- Requests
-- mysql.connector
-- Datetime
-- Gunicorn
-- Streamlit
-- QRCode
-
 ## Deployment
 
 The app is deployed using [PythonAnywhere](https://www.pythonanywhere.com/). Access the live app at [MyCoinAddress](https://maegox.pythonanywhere.com/).
-
-## Installation
-
-To run the app locally, make sure you have the required dependencies installed. You can install them using:
-
-```bash
-pip install -r requirements.txt
-```
-
-## License
-This project is licensed under the MIT License.
